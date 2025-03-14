@@ -1,0 +1,21 @@
+﻿/* Page specific styles for Home.aspx */
+.welcome-container h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.welcome-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.feature h2 {
+    color: #303030;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}

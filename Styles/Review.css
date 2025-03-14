@@ -1,0 +1,6 @@
+﻿/* Page specific styles for Review.aspx */
+.review-output {
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}

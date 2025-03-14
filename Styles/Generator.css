@@ -1,0 +1,11 @@
+﻿/* Page specific styles for Generator.aspx */
+.form-control {
+    margin-bottom: 15px;
+}
+
+.code-output {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}

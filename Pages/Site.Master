@@ -1,0 +1,34 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="DevGenie.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server">DevGenie</asp:ContentPlaceHolder>
+    </title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <header>
+            DevGenie
+        </header>
+        <nav class="navbar">
+            <a href="Home.aspx">Home</a>
+            <a href="Generator.aspx">Code Generator</a>
+            <a href="Output.aspx">Code Explanation</a>
+            <a href="Review.aspx">Code Review</a>
+            <a href="Login.aspx">Login</a>
+        </nav>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            &copy; 2025 DevGenie. All rights reserved.
+        </footer>
+    </form>
+</body>
+</html>
