@@ -3,14 +3,15 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Web.UI;
 using System.Threading.Tasks; // Required for async methods
+using System.Text.RegularExpressions;
 
 namespace DevGenie
 {
     public partial class Review : Page
     {
-        protected System.Web.UI.WebControls.Literal reviewOutput;
+        protected System.Web.UI.WebControls.Label reviewOutput;
         protected System.Web.UI.WebControls.TextBox code;
-        protected System.Web.UI.WebControls.TextBox explanation;
+        protected System.Web.UI.WebControls.Label explanation;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,37 +23,26 @@ namespace DevGenie
         {
             try
             {
-                // Ensure both code and reviewOutput have valid content before proceeding
-                if (string.IsNullOrWhiteSpace(code.Text))
-                {
-                    reviewOutput.Text = "<div class='error-message'>Error: Code input is empty.</div>";
-                    return;
-                }
-
-                // Generate AI review (assuming an AI-based service handles this)
                 using var openAIService = new OpenAIService();
-                string reviewText = await openAIService.ReviewCodeAsync(code.Text.Trim(), "any");
+                string reviewResult = await openAIService.ReviewCodeAsync(code.Text.Trim(), "any");
 
-                if (string.IsNullOrWhiteSpace(reviewText))
+                if (!string.IsNullOrEmpty(reviewResult))
                 {
-                    reviewOutput.Text = "<div class='error-message'>Error: Review generation failed.</div>";
-                    return;
+                    explanation.Text = reviewResult; // Fix: Show review in explanation box
+                    await SaveToHistoryAsync(code.Text, reviewResult);
                 }
-
-                // Format and display the review
-                reviewOutput.Text = FormatReviewWithCodeBlocks(reviewText);
-
-                // Save to history
-                await SaveToHistoryAsync(code.Text, reviewOutput.Text);
-
-                // Register JavaScript to apply syntax highlighting after update
-                ScriptManager.RegisterStartupScript(this, GetType(), "highlight", "initHighlighting();", true);
+                else
+                {
+                    explanation.Text = "No review output generated.";
+                }
             }
             catch (Exception ex)
             {
-                reviewOutput.Text = $"<div class='error-message'>Error: {HttpUtility.HtmlEncode(ex.Message)}</div>";
+                explanation.Text = $"Error: {ex.Message}";
             }
         }
+
+
 
         private async Task SaveToHistoryAsync(string codeSubmitted, string reviewComments)
         {
@@ -84,12 +74,6 @@ namespace DevGenie
                 // Log error (optional: replace with a proper logging system)
                 System.Diagnostics.Debug.WriteLine($"Database Error: {ex.Message}");
             }
-        }
-
-        private string FormatReviewWithCodeBlocks(string review)
-        {
-            // Replace code blocks with proper formatting
-            return review.Replace("```", "<pre><code>").Replace("```", "</code></pre>");
         }
     }
 }
