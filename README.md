@@ -1,5 +1,3 @@
----
-
 # DevGenie 🧞‍♂️ - Your AI-Powered Coding Assistant
 
 *Generate, Explain, and Review Code with Ease!*
