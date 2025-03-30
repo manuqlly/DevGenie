@@ -1,7 +1,3 @@
-Let’s create an attractive and professional `README.md` for your DevGenie project. Based on the screenshots, I can see that this is an ASP.NET C# project using the MVC framework, with a focus on AI-powered coding assistance (code generation, explanation, and review). The project structure and NuGet packages are visible, so I’ll include those details, ensure users know to add their own Open AI API key, and leave a placeholder for a YouTube video embed. I’ll also make it clear that the project is open-source and guide users on installation.
-
-Here’s the `README.md`:
-
 ---
 
 # DevGenie 🧞‍♂️ - Your AI-Powered Coding Assistant
@@ -221,8 +217,7 @@ Contributions are welcome! If you’d like to contribute to DevGenie, please fol
 ## 📧 Contact
 
 For any questions or feedback, feel free to reach out:  
-📧 [your-email@example.com](mailto:your-email@example.com)  
-🌐 [Your Website](#)
+📧 [selva.p@somaiya.edu](mailto:selva.p@somaiya.edu)  
 
 ---
 
