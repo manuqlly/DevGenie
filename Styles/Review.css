@@ -1,6 +1,99 @@
-﻿/* Page specific styles for Review.aspx */
-.review-output {
+﻿/* Review page specific styles */
+.code-editor {
+    font-family: 'Consolas', 'Courier New', monospace;
     font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.review-container {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 15px;
+    min-height: 200px;
+    max-height: 600px;
+    overflow-y: auto;
+    font-size: 15px;
     line-height: 1.6;
-    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+    .review-container p {
+        margin-bottom: 15px;
+    }
+
+    .review-container pre {
+        background-color: #1e1e1e;
+        padding: 12px;
+        border-radius: 5px;
+        overflow-x: auto; /* Allow scrolling only in code blocks if needed */
+        margin: 15px 0;
+        max-width: 100%;
+    }
+
+    .review-container code {
+        font-family: 'Consolas', 'Courier New', monospace;
+        font-size: 14px;
+    }
+
+    .review-container .inline-code {
+        background-color: #f5f5f5;
+        padding: 2px 4px;
+        border-radius: 3px;
+        border: 1px solid #e0e0e0;
+        color: #e83e8c;
+    }
+
+    .review-container strong {
+        font-weight: bold;
+    }
+
+    .review-container .list-item {
+        margin-bottom: 8px;
+        padding-left: 10px;
+        display: flex;
+    }
+
+    .review-container .list-number {
+        font-weight: bold;
+        margin-right: 5px;
+        min-width: 25px;
+    }
+
+    .review-container .section-header {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+
+    .review-container h3 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Improve display of specific elements in code */
+    .review-container .hljs-string {
+        color: #ce9178;
+    }
+
+    .review-container .hljs-comment {
+        color: #6a9955;
+    }
+
+    .review-container .hljs-keyword {
+        color: #569cd6;
+    }
+
+.error-message {
+    color: #d32f2f;
+    padding: 10px;
+    background-color: #ffebee;
+    border-radius: 4px;
 }

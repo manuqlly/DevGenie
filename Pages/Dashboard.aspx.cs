@@ -112,6 +112,5 @@ namespace DevGenie
             }
         }
 
-        // Rest of the code remains the same as in the previous implementation
     }
 }

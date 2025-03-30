@@ -9,6 +9,7 @@
         <asp:ContentPlaceHolder ID="TitleContent" runat="server">DevGenie</asp:ContentPlaceHolder>
     </title>
     <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/auth.css">
     <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
@@ -18,10 +19,12 @@
         </header>
         <nav class="navbar">
             <a href="Home.aspx">Home</a>
-            <a href="Generator.aspx">Code Generator</a>
-            <a href="Output.aspx">Code Explanation</a>
-            <a href="Review.aspx">Code Review</a>
-            <a href="Login.aspx">Login</a>
+            <asp:HyperLink ID="lnkGenerator" runat="server" NavigateUrl="~/Pages/Generator.aspx">Code Generator</asp:HyperLink>
+            <asp:HyperLink ID="lnkOutput" runat="server" NavigateUrl="~/Pages/Output.aspx">Code Explanation</asp:HyperLink>
+            <asp:HyperLink ID="lnkReview" runat="server" NavigateUrl="~/Pages/Review.aspx">Code Review</asp:HyperLink>
+            <asp:HyperLink ID="lnkDashboard" runat="server" NavigateUrl="~/Pages/Dashboard.aspx">Dashboard</asp:HyperLink>
+            <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Pages/Login.aspx">Login</asp:HyperLink>
+            <asp:LinkButton ID="lnkLogout" runat="server" OnClick="Logout_Click" CausesValidation="false">Logout</asp:LinkButton>
         </nav>
         <div class="container">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
