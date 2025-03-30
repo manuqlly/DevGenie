@@ -1,0 +1,73 @@
+﻿/* Authentication Pages Styles */
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+    .auth-container h2 {
+        color: #303030;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .auth-container p {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #666;
+    }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.message-label {
+    display: block;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+    .message-label[style*="Red"] {
+        background-color: #fee;
+        color: #c00;
+    }
+
+.auth-links {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+    .auth-links a {
+        color: #303030;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .auth-links a:hover {
+            color: #504a45;
+            text-decoration: underline;
+        }
+
+/* Make these buttons stand out a bit more */
+.auth-container .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 20px;
+        margin: 0 10px;
+    }
+}
