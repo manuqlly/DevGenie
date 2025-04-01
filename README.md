@@ -19,7 +19,7 @@
 ## 📺 Demo Video
 
 <!-- Replace the link below with your YouTube video embed link -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jbwwxanz4_s" title="DevGenie Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![DevGenie Demo](https://img.youtube.com/vi/jbwwxanz4_s/0.jpg)](https://www.youtube.com/watch?v=jbwwxanz4_s)
 
 ---
 
